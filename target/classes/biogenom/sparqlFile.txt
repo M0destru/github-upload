@@ -1,0 +1,12 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+PREFIX : <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#>
+
+SELECT DISTINCT ?diagnostic_report_id ?create_date ?collect_date {
+	?diagnostic_report :idDiagnosticReport ?diagnostic_report_id ; :collectedAt ?collect_date ; :createdAt ?create_date.
+	?diagnostic_report_file :isDiagnosticReportFileOf ?diagnostic_report .
+	?observation :hasRecordIn ?diagnostic_report_file .
+	?observation :hasBiomarker ?biomarker .
+	?biomarker :biomarkerName "Лейкоциты (WBC)" .
+}
+ORDER BY ?create_date ?collect_date 

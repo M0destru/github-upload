@@ -1,0 +1,73 @@
+[PrefixDeclaration]
+:		http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#
+owl:		http://www.w3.org/2002/07/owl#
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+xml:		http://www.w3.org/XML/1998/namespace
+xsd:		http://www.w3.org/2001/XMLSchema#
+obda:		https://w3id.org/obda/vocabulary#
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+
+[MappingDeclaration] @collection [[
+mappingId	biomarker
+target		:biomarkers/{id} a :Biomarker ; :hasBiomaterial :biomaterials/{biomaterial_id} ; rdfs:label "Биомаркер"^^xsd:string ; :hasEnum :enums/{enum_id} ; :biomarkerName {name} . 
+source		SELECT *
+			FROM public.biomarkers
+
+mappingId	biomaterial
+target		:biomaterials/{id} a :Biomaterial ; :biomaterialName {name} . 
+source		SELECT *
+			FROM public.biomaterials
+
+mappingId	diagnostic_report_files
+target		:diagnostic_report_files/{id} a :DiagnosticReportFile ; :isDiagnosticReportFileOf :diagnostic_reports/{diagnostic_report_id} ; :path {path} . 
+source		SELECT *
+			FROM public.diagnostic_report_files
+
+mappingId	diagnostic_reports
+target		:diagnostic_reports/{id} a :DiagnosticReport ; :isDiagnosticReportOf :users/{user_id} ; :hasUserProfile :user_profiles{user_profile_id} ; :madeInLab :medical_laboratories/{performer_id} ; :idDiagnosticReport {id}^^rdf:literal ; :createdAt {created_at} ; :collectedAt {collected_at} . 
+source		SELECT *
+			FROM public.diagnostic_reports
+
+mappingId	enum_values
+target		:enum_values/{id} a :EnumValue ; :isEnumValueOf :enum/{enum_id} ; :enumValueName {name} . 
+source		SELECT *
+			FROM public.enum_values
+
+mappingId	enums
+target		:enums/{id} a :Enum . 
+source		SELECT *
+			FROM public.enums
+
+mappingId	observations
+target		:observations/{id} a :Observation ; :hasBiomarker :biomarkers/{biomarker_id} ; :hasRecordIn :diagnostic_report_files/{diagnostic_report_file_id} ; :hasObservationEnumValue :enum_values/{value_enum_id} ; :valueDecimal {value_decimal} . 
+source		SELECT *
+			FROM public.observations
+
+mappingId	users
+target		:users/{id} a :User ; :userName {user_name} . 
+source		SELECT *
+			FROM public.users
+
+mappingId	venous_blood
+target		:biomaterials/{id} a :VenousBlood . 
+source		SELECT *
+			FROM public.biomaterials
+			WHERE name = 'Венозная кровь'
+
+mappingId	capillary_blood
+target		:biomaterials/{id} a :CapillaryBlood . 
+source		SELECT *
+			FROM public.biomaterials
+			WHERE name = 'Капиллярная кровь'
+
+mappingId	medical_laboratories
+target		:medical_laboratories/{id} a :Laboratory ; :laboratoryName {name} . 
+source		SELECT *
+			FROM public.medical_laboratories
+
+mappingId	user_profiles
+target		:user_profiles/{id} a :UserProfile ; :profileName {name} ; :hasUser :users/{user_id} . 
+source		SELECT *
+			FROM public.user_profiles
+]]
+

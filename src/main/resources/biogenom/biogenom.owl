@@ -1,0 +1,428 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#"
+     xml:base="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:obda="https://w3id.org/obda/vocabulary#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#hasBiomarker -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#hasBiomarker">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Observation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomarker"/>
+        <rdfs:label xml:lang="ru">Является результатом измерения биомаркера</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#hasBiomaterial -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#hasBiomaterial">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#isBiomaterialOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomarker"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomaterial"/>
+        <rdfs:label xml:lang="ru">Имеет биоматериал</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#hasDiagnosticReport -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#hasDiagnosticReport">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#isDiagnosticReportOf"/>
+        <rdfs:label xml:lang="ru">Имеет бланк с результатами анализов</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#hasEnum -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#hasEnum">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomarker"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Enum"/>
+        <rdfs:label xml:lang="ru">Имеет областью значений</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#hasEnumValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#hasEnumValue">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#isEnumValueOf"/>
+        <rdfs:label xml:lang="ru">Имеет значение перечисления</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#hasFile -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#hasFile">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#isDiagnosticReportFileOf"/>
+        <rdfs:label xml:lang="ru">Имеет файл бланка с результатами анализов</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#hasObservationEnumValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#hasObservationEnumValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Observation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#EnumValue"/>
+        <rdfs:label xml:lang="ru">Имеет перечислимое значение результата измерения</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#hasRecordIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#hasRecordIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Observation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#DiagnosticReportFile"/>
+        <rdfs:label xml:lang="ru">Имеет запись в файле</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#hasUser -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#hasUser">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#UserProfile"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#User"/>
+        <rdfs:label xml:lang="ru">Имеет пользователя</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#hasUserProfile -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#hasUserProfile">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#DiagnosticReport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#UserProfile"/>
+        <rdfs:label xml:lang="ru">Имеет семейный профиль</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#isBiomaterialOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#isBiomaterialOf">
+        <rdfs:label xml:lang="ru">Является биоматериалом</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#isDiagnosticReportFileOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#isDiagnosticReportFileOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#DiagnosticReportFile"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#DiagnosticReport"/>
+        <rdfs:label xml:lang="ru">Является файлом бланка с результатами анализов</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#isDiagnosticReportOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#isDiagnosticReportOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#DiagnosticReport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#User"/>
+        <rdfs:label xml:lang="ru">Является бланком с результатами анализов</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#isEnumValueOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#isEnumValueOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#EnumValue"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Enum"/>
+        <rdfs:label xml:lang="ru">Является значением перечисления</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#madeInLab -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#madeInLab">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#DiagnosticReport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Laboratory"/>
+        <rdfs:label xml:lang="ru">Сделано в лаборатории</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomarkerName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomarkerName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomarker"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="ru">название биомаркера</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomaterialName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomaterialName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomaterial"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="ru">название биоматериала</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#collectedAt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#collectedAt">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#DiagnosticReport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label xml:lang="ru">взят</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#createdAt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#createdAt">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#DiagnosticReport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label xml:lang="ru">создан</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#enumValueName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#enumValueName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#EnumValue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="ru">название перечислимого значения</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#idDiagnosticReport -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#idDiagnosticReport">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#DiagnosticReport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="ru">id файла бланка с результатами анализов</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#laboratoryName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#laboratoryName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Laboratory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="ru">название лаборатории</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#path -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#path">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#DiagnosticReportFile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ru">путь до файла</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#profileName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#profileName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#UserProfile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="ru">название профиля</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#userName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#userName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="ru">имя пользователя</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#valueDecimal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#valueDecimal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Observation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="ru">десятичное значение</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomarker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomarker">
+        <rdfs:label xml:lang="ru">Биомаркер</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomaterial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomaterial">
+        <rdfs:label xml:lang="ru">Биоматериал</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Blood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Blood">
+        <rdfs:label xml:lang="ru">Кровь</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#CapillaryBlood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#CapillaryBlood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Blood"/>
+        <rdfs:label xml:lang="ru">Капиллярная кровь</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#DiagnosticReport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#DiagnosticReport">
+        <rdfs:label xml:lang="ru">Бланк с результатами анализов</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#DiagnosticReportFile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#DiagnosticReportFile">
+        <rdfs:label xml:lang="ru">Файл бланка с результатами анализов</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Enum -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Enum">
+        <rdfs:label xml:lang="ru">Перечисление</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#EnumValue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#EnumValue">
+        <rdfs:label xml:lang="ru">Значение перечисления</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Laboratory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Laboratory">
+        <rdfs:label xml:lang="ru">Лаборатория</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Observation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Observation">
+        <rdfs:label xml:lang="ru">Значение результата измерения биомаркера</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#User -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#User">
+        <rdfs:label xml:lang="ru">Пользователь</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#UserProfile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#UserProfile">
+        <rdfs:label xml:lang="ru">Семейный профиль</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#VenousBlood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#VenousBlood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Blood"/>
+        <rdfs:label xml:lang="ru">Венозная кровь</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

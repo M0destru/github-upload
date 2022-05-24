@@ -1,0 +1,430 @@
+Запрос 1
+Текст запроса: Анализы с глюкозой.
+Результат:
+
+Type: Keyword
+TextFragment: глюкоза
+Id: 72
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomarker>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomarkerName
+Initial Form: глюкоза
+
+------------------
+Запрос 2
+Текст запроса: Клинический анализ венозной крови.
+Результат:
+
+Type: Keyword
+TextFragment: венозной крови
+Id: 79
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomaterial>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomaterialName
+Initial Form: венозный кровь
+
+------------------
+Запрос 3
+Текст запроса: Анализы за сегодня.
+Результат:
+
+Type: Expression
+TextFragment: 2022-04-28
+Statement: =
+Operand: (Value Type: DateRange, Start: 2022-04-28, End: 2022-04-28)
+
+------------------
+Запрос 4
+Текст запроса: Анализы из МедЛабЭкспресс.
+Результат:
+
+Type: Keyword
+TextFragment: медлабэкспресс
+Id: 86
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Laboratory>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#laboratoryName
+Initial Form: медлабэкспресс
+
+------------------
+Запрос 5
+Текст запроса: Анализы, где есть показатель равный 6.09
+Результат:
+
+Type: Expression
+TextFragment: равный 6.089999999999999857891452847979962825775146484375
+Statement: =
+Operand: (Value Type: Decimal, Value: 6.089999999999999857891452847979962825775146484375)
+
+------------------
+Запрос 6
+Текст запроса: Анализ венозной крови, где есть глюкоза.
+Результат:
+
+Type: Keyword
+TextFragment: венозной крови
+Id: 79
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomaterial>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomaterialName
+Initial Form: венозный кровь
+
+Type: Keyword
+TextFragment: глюкоза
+Id: 72
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomarker>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomarkerName
+Initial Form: глюкоза
+
+------------------
+Запрос 7
+Текст запроса: Анализы, где встречается C-реактивный белок, за 26.01.2022
+Результат:
+
+Type: Keyword
+TextFragment: c-реактивный белок
+Id: 76
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomarker>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomarkerName
+Initial Form: c-реактивный белок
+
+Type: Expression
+TextFragment: 2022-01-26
+Statement: =
+Operand: (Value Type: DateRange, Start: 2022-01-26, End: 2022-01-26)
+
+------------------
+Запрос 8
+Текст запроса: Лабораторные анализы на лейкоциты в "МедЛабЭкспресс".
+Результат:
+
+Type: Keyword
+TextFragment: лейкоцитами
+Id: 75
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomarker>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomarkerName
+Initial Form: лейкоцит wbc
+
+Type: Keyword
+TextFragment: медлабэкспресс
+Id: 86
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Laboratory>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#laboratoryName
+Initial Form: медлабэкспресс
+
+------------------
+Запрос 9
+Текст запроса: Анализы с глюкозой больше 4.1.
+Результат:
+
+Type: Keyword
+TextFragment: глюкоза
+Id: 72
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomarker>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomarkerName
+Initial Form: глюкоза
+
+------------------
+Запрос 10
+Текст запроса: Анализы на венозную кровь до 31.12.2021
+Результат:
+
+Type: Keyword
+TextFragment: венозной крови
+Id: 79
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomaterial>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomaterialName
+Initial Form: венозный кровь
+
+Type: Expression
+TextFragment: 2021-12-31
+Statement: =
+Operand: (Value Type: DateRange, Start: 2021-12-31, End: 2021-12-31)
+
+------------------
+Запрос 11
+Текст запроса: Анализ слюны в ЛабДиагностика.
+Результат:
+
+Type: Keyword
+TextFragment: слюны
+Id: 80
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomaterial>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomaterialName
+Initial Form: слюна
+
+Type: Keyword
+TextFragment: лабдиагностика
+Id: 84
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Laboratory>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#laboratoryName
+Initial Form: лабдиагностика
+
+------------------
+Запрос 12
+Текст запроса: Вчерашние анализы в МедЛабЭкспресс.
+Результат:
+
+Type: Expression
+TextFragment: 2022-04-27
+Statement: =
+Operand: (Value Type: DateRange, Start: 2022-04-27, End: 2022-04-27)
+
+Type: Keyword
+TextFragment: медлабэкспресс
+Id: 86
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Laboratory>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#laboratoryName
+Initial Form: медлабэкспресс
+
+------------------
+Запрос 13
+Текст запроса: Гемоглобин по венозной крови за сегодня.
+Результат:
+
+Type: Keyword
+TextFragment: гемоглобин
+Id: 73
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomarker>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomarkerName
+Initial Form: гемоглобин
+
+Type: Keyword
+TextFragment: венозной крови
+Id: 79
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomaterial>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomaterialName
+Initial Form: венозный кровь
+
+Type: Expression
+TextFragment: 2022-04-28
+Statement: =
+Operand: (Value Type: DateRange, Start: 2022-04-28, End: 2022-04-28)
+
+------------------
+Запрос 14
+Текст запроса: Билирубин вчера в ЛабДиагностика.
+Результат:
+
+Type: Keyword
+TextFragment: билирубин
+Id: 71
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomarker>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomarkerName
+Initial Form: билирубин
+
+Type: Expression
+TextFragment: 2022-04-27
+Statement: =
+Operand: (Value Type: DateRange, Start: 2022-04-27, End: 2022-04-27)
+
+Type: Keyword
+TextFragment: лабдиагностика
+Id: 84
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Laboratory>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#laboratoryName
+Initial Form: лабдиагностика
+
+------------------
+Запрос 15
+Текст запроса: Иммуноглобулины класса М по венозной крови в МедЛабЭкспресс
+Результат:
+
+Type: Keyword
+TextFragment: иммуноглобулины класса
+Id: 74
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomarker>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomarkerName
+Initial Form: иммуноглобулин класс
+
+Type: Keyword
+TextFragment: венозной крови
+Id: 79
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomaterial>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomaterialName
+Initial Form: венозный кровь
+
+Type: Keyword
+TextFragment: медлабэкспресс
+Id: 86
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Laboratory>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#laboratoryName
+Initial Form: медлабэкспресс
+
+------------------
+Запрос 16
+Текст запроса: Гемоглобин в венозной крови больше 135
+Результат:
+
+Type: Keyword
+TextFragment: гемоглобин
+Id: 73
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomarker>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomarkerName
+Initial Form: гемоглобин
+
+Type: Keyword
+TextFragment: венозной крови
+Id: 79
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomaterial>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomaterialName
+Initial Form: венозный кровь
+
+Type: Expression
+TextFragment: больше 135
+Statement: >
+Operand: (Value Type: Decimal, Value: 135)
+
+------------------
+Запрос 17
+Текст запроса: Гемоглобин меньше 150 за год
+Результат:
+
+Type: Keyword
+TextFragment: гемоглобин
+Id: 73
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomarker>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomarkerName
+Initial Form: гемоглобин
+
+Type: Expression
+TextFragment: меньше 150
+Statement: <
+Operand: (Value Type: Decimal, Value: 150)
+
+------------------
+Запрос 18
+Текст запроса: Анализы с лейкоцитами равными семи по венозной крови раньше 26.01.2022
+Результат:
+
+Type: Keyword
+TextFragment: лейкоцитами
+Id: 75
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomarker>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomarkerName
+Initial Form: лейкоцит wbc
+
+Type: Keyword
+TextFragment: венозной крови
+Id: 79
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomaterial>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomaterialName
+Initial Form: венозный кровь
+
+Type: Expression
+TextFragment: раньше 2022-01-26
+Statement: <
+Operand: (Value Type: DateRange, Start: 2022-01-26, End: 2022-01-26)
+
+------------------
+Запрос 19
+Текст запроса: Глюкоза равная 4.0 в СдайГлюкозу
+Результат:
+
+Type: Keyword
+TextFragment: глюкоза
+Id: 72
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomarker>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomarkerName
+Initial Form: глюкоза
+
+Type: Expression
+TextFragment: 4
+Statement: =
+Operand: (Value Type: Decimal, Value: 4)
+
+Type: Keyword
+TextFragment: сдайглюкозу
+Id: 85
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Laboratory>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#laboratoryName
+Initial Form: сдайглюкоза
+
+------------------
+Запрос 20
+Текст запроса: Плазма неделю назад в СдайПлазму
+Результат:
+
+Type: Keyword
+TextFragment: плазма
+Id: 78
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomaterial>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomaterialName
+Initial Form: плазма
+
+------------------
+Запрос 21
+Текст запроса: IgG к антигену core в венозной крови за 21.01.2021 в МедЛабЭкспресс
+Результат:
+
+Type: Keyword
+TextFragment: igg
+Id: 77
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomarker>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomarkerName
+Initial Form: igg антиген core
+
+Type: Keyword
+TextFragment: igg
+Id: 77
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomarker>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomarkerName
+Initial Form: igg антиген core
+
+Type: Keyword
+TextFragment: венозной крови
+Id: 79
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomaterial>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomaterialName
+Initial Form: венозный кровь
+
+Type: Expression
+TextFragment: 2021-01-21
+Statement: =
+Operand: (Value Type: DateRange, Start: 2021-01-21, End: 2021-01-21)
+
+Type: Keyword
+TextFragment: медлабэкспресс
+Id: 86
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Laboratory>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#laboratoryName
+Initial Form: медлабэкспресс
+
+------------------
+Запрос 22
+Текст запроса: Антитела IgG больше 10 в венозной крови за 21.01.2021 в МедЛабЭкспресс
+Результат:
+
+Type: Keyword
+TextFragment: igg
+Id: 77
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomarker>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomarkerName
+Initial Form: igg антиген core
+
+Type: Expression
+TextFragment: больше 10
+Statement: >
+Operand: (Value Type: Decimal, Value: 10)
+
+Type: Keyword
+TextFragment: венозной крови
+Id: 79
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Biomaterial>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#biomaterialName
+Initial Form: венозный кровь
+
+Type: Expression
+TextFragment: 2021-01-21
+Statement: =
+Operand: (Value Type: DateRange, Start: 2021-01-21, End: 2021-01-21)
+
+Type: Keyword
+TextFragment: медлабэкспресс
+Id: 86
+OWL Class: <http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#Laboratory>
+Data Property: http://www.semanticweb.org/rustam-pc/ontologies/2022/0/biogenom#laboratoryName
+Initial Form: медлабэкспресс
+
+------------------
+Запрос 23
+Текст запроса: Все анализы
+Результат:
+
+------------------
